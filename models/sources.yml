@@ -1,0 +1,95 @@
+sources:
+  - name: external_source
+    meta:
+      external_location: "s3://us-prd-motherduck-open-datasets/stackoverflow/parquet/2023-05/{name}.parquet"
+    tables:
+      - name: badges
+        description: "Badges table"
+        columns:
+          - name: user_id
+            description: "User ID"
+            data_type: integer
+          - name: badge_id
+            description: "Badge ID"
+            data_type: integer
+          - name: date_earned
+            description: "Date the badge was earned"
+            data_type: date
+      - name: comments
+        description: "Comments table"
+        columns:
+          - name: comment_id
+            description: "Comment ID"
+            data_type: integer
+          - name: post_id
+            description: "Post ID"
+            data_type: integer
+          - name: user_id
+            description: "User ID"
+            data_type: integer
+          - name: date_commented
+            description: "Date the comment was made"
+            data_type: date
+      - name: posts
+        description: "Posts table"
+        columns:
+          - name: post_id
+            description: "Post ID"
+            data_type: integer
+          - name: user_id
+            description: "User ID"
+            data_type: integer
+          - name: date_posted
+            description: "Date the post was made"
+            data_type: date
+          - name: content
+            description: "Content of the post"
+            data_type: string
+      - name: post_links
+        description: "Post links table"
+        columns:
+          - name: post_id
+            description: "Post ID"
+            data_type: integer
+          - name: related_post_id
+            description: "Related Post ID"
+            data_type: integer
+          - name: link_type
+            description: "Type of link"
+            data_type: string
+      - name: tags
+        description: "Tags table"
+        columns:
+          - name: tag_id
+            description: "Tag ID"
+            data_type: integer
+          - name: tag_name
+            description: "Name of the tag"
+            data_type: string
+      - name: users
+        description: "Users table"
+        columns:
+          - name: user_id
+            description: "User ID"
+            data_type: integer
+          - name: display_name
+            description: "Display name of the user"
+            data_type: string
+          - name: reputation
+            description: "Reputation score of the user"
+            data_type: integer
+      - name: votes
+        description: "Votes table"
+        columns:
+          - name: vote_id
+            description: "Vote ID"
+            data_type: integer
+          - name: post_id
+            description: "Post ID"
+            data_type: integer
+          - name: user_id
+            description: "User ID"
+            data_type: integer
+          - name: vote_type
+            description: "Type of vote"
+            data_type: string

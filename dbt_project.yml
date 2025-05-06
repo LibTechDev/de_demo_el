@@ -1,9 +1,9 @@
-name: 'jaffle_shop'
+name: 'de_demo_el'
 
 config-version: 2
 version: '0.1'
 
-profile: 'jaffle_shop'
+profile: 'de_demo_el'
 
 model-paths: ["models"]
 seed-paths: ["seeds"]
